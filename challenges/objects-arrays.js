@@ -5,6 +5,7 @@
   Use this pattern to create your objects: 
   object name, diet, weight, length, period
 */
+var dinosaurs =['name','diet','weight', 'length', 'period'];
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 
@@ -49,9 +50,9 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array.  
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
-console.log(universities)
+const universities = graduates.sort((a,b) => (a.university  - b.university));
 
+console.log(universities);
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
 The resulting contact information should have a space between the first name and the email information like this: 
@@ -88,7 +89,7 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-const animalNames = [];
+const animalNames = zooAnimals.forEach;
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -97,15 +98,19 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = [];
-console.log(lowerCase); 
+const lowerCase = zooAnimals.map((names) => {
+  return names.animal_name.toLowerCase();
+});
+ 
 
 /* Request 3: .filter() 
 
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const lowerPopulation = [];
+const lowerPopulation = zooAnimals.filter((state) => {
+  return state.population >= 5;
+});
 console.log(lowerPopulation);
 
 /* Request 4: .reduce() 
