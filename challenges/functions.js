@@ -6,29 +6,34 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
-//const consume = function(height, width, cb) {
- // return cb(height + width);
+const consume = function(height, weight ,cb) {
+  return cb (height *weight);
+};
+//function consume(height, width, cb) {
+ //return cb(height + width);
 //}
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-//const consume = function(x,y, cb){
- // var add = x+y;
-  //return cb(add);
-//}
-  
-
-
-
-const  consume = function(x, y, cb) {
-  
-return cb(consume);
+function add(x,y,cb){
+return cb(x + y);
+ 
 }
+  
+function multiply(x, y, cb) {
+var times = x * y;
+return cb(times);
+  
+
+function greeting (first_name, last_name, cb){
+  var  speak = `Hello ${first_name} + " " + ${last_name}, nice to meet you!`;
+  return cb(speak);
+  }
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 //consume(2,2,add); // 4
- consume(10,16,multiply); // 160
+ //consume(10,16,multiply); // 160
 // consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
@@ -37,9 +42,10 @@ return cb(consume);
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
+ the function declared on the inside can reach the outward scope. 
 
 
-const external = "I'm outside the function";
+/*const external = "I'm outside the function";
 
 function myFunction() {
   console.log(external);
@@ -51,3 +57,4 @@ function myFunction() {
   nestedFunction();
 }
 myFunction();
+*/
