@@ -6,33 +6,60 @@
   * The last parameter accepts a callback 
   * In the body of the function return the callback with the two parameters that you created
 */
-const consume = function(height, weight ,cb) {
-  return cb (height *weight);
-};
+
 //function consume(height, width, cb) {
- //return cb(height + width);
+//return cb(height + width);
 //}
+//consume(1111,11111, function(add){
+  //console.log(add)
+//});
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-function add(x,y,cb){
-return cb(x + y);
- 
-}
-  
-function multiply(x, y, cb) {
-var times = x * y;
-return cb(times);
-  
 
-function greeting (first_name, last_name, cb){
-  var  speak = `Hello ${first_name} + " " + ${last_name}, nice to meet you!`;
-  return cb(speak);
-  }
+
+
+//Add
+//function consume(x, y, cb) {
+//return cb (x + y);
+//}
+//consume(2,2, function(add){
+//console.log(add)
+
+
+//});
+
+//Multiply
+
+//function consume(x, y, cb) {
+//return cb(x * y);
+//}
+//consume(10,16, function(multiply) {
+//console.log(multiply)
+//});
+
+//Greeting
+function consume(firstname, lastname, cb) {
+  return cb(`Hello ${firstname} ${lastname}, nice to meet you!`);
+}
+consume("Mary", "Poppins", function(greeting) {
+  console.log(greeting);
+
+});
+
+
+
+/* STRETCH PROBLEM */
+
+
+
+
+
+
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-//consume(2,2,add); // 4
+//consume(2,2) // 4
  //consume(10,16,multiply); // 160
 // consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
@@ -42,19 +69,19 @@ function greeting (first_name, last_name, cb){
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
- the function declared on the inside can reach the outward scope. 
+ //the function declared on the inside can reach the outward scope. 
 
 
-/*const external = "I'm outside the function";
+//const external = "I'm outside the function";
 
-function myFunction() {
-  console.log(external);
-  const internal = "Hello! I'm inside myFunction!";
+//function myFunction() {
+  //console.log(external);
+  //const internal = "Hello! I'm inside myFunction!";
 
-  function nestedFunction() {
-    console.log(internal);
-  };
-  nestedFunction();
-}
-myFunction();
-*/
+  //function nestedFunction() {
+   // console.log(internal);
+  //};
+ // nestedFunction();
+//}
+//myFunction();
+//}

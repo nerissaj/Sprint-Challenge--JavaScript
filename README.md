@@ -34,12 +34,12 @@ biggest difference in `.forEach` & `.map` is that map returns a new array of ele
 
 2. What is the difference between a function and a method?
 
-A  Function is a set of code to do some task in JavaScript..
+A  Function is a set of code to do some task in JavaScript. by protect block of code.
  A method is just a function which is a property of an object.
 
 3. What is closure?
 
-The combination of a function, and the lexical environment within which that function was declared. 
+The combination of a function, and the lexical environment within which that function was declared.
 
 4. Describe the four rules of the 'this' keyword.
 
